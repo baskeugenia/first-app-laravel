@@ -7,8 +7,8 @@
 <body>
 
     @auth
-    <p>Logged in</p>
-    <form action="/logout" method="post">
+    <p>{{ Auth::user()->name }} Logged in</p>
+    <form action="{{ route('logout') }}" method="post">
         @csrf
         <button>Log out</button>
     </form>
@@ -42,29 +42,12 @@
     </div>
 
     @else
-
-    <div style="border: 3px solide black">
-        <h2>Register</h2>
-        <form action="/register" method="post">
-            @csrf
-            <input name="name" type="text" placeholder="name">
-            <input name="email" type="email" type="email" placeholder="email@example.com">
-            <input name="password" type="password" type="password">
-            <button>Register</button>
-        </form>
-    </div>
-
-
-    <div style="border: 3px solide black">
-        <h2>Login</h2>
-        <form action="/login" method="post">
-            @csrf
-            <input name="loginname" type="text" placeholder="name">
-            <input name="loginpassword" type="password" type="password">
-            <button>Log in</button>
-        </form>
-    </div>
-
+    <header>
+        <nav>
+            <a href="{{ route('show.login') }}" class="btn">Login</a>
+            <a href="{{ route('show.register') }}" class="btn">Register</a>
+        </nav>
+    </header>
     @endauth
 </body>
 </html>
