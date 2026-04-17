@@ -1,0 +1,13 @@
+.git
+.gitignore
+.dockerignore
+compose.yaml.sail
+vendor
+storage/*.key
+.env.backup
+.phpunit.result.cache
+node_modules
+*.sql
+*.sql.gz
+README.md
+.DS_Store
