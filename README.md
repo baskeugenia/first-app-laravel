@@ -2,7 +2,7 @@
 
 ```bash
 docker compose up -d
-
+```
 ## ⚠️ Security Note
 
 The `.env` file in this repository is pre-configured for **local development only**.
